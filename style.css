@@ -17,9 +17,8 @@
     background-color: blue;
 }
 #pixel-board {
-   border: 1px solid black;
-   width: 200px;
-   height: 200px;
+   width: 230px;
+   height: 230px;
 }
 .pixel {
   border: 1px solid black; 
