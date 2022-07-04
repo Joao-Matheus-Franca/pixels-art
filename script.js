@@ -35,3 +35,15 @@ function adicionarCor(event) {
     console.log(color);
     event.target.style.backgroundColor = color;
 }
+
+let button = document.getElementById('clear-board');
+
+button.addEventListener('click', limpar);
+
+function limpar () { 
+    let resetar = document.getElementsByClassName('pixel');
+    for (i = 0; i < resetar.length; i += 1){
+        resetar[i].style.backgroundColor = 'white'
+    }
+}
+  
