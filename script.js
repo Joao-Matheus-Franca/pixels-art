@@ -25,3 +25,13 @@ function addSelected (event) {
         event.target.classList.add('selected')
     }
 }
+
+for (id = 0; id < pixels.length; id += 1) {
+    pixels[id].addEventListener('click', adicionarCor);
+}
+function adicionarCor(event) {
+    console.log(event.target);
+    let color = getComputedStyle(document.getElementsByClassName('selected')[0]).backgroundColor;
+    console.log(color);
+    event.target.style.backgroundColor = color;
+}
