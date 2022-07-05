@@ -1,12 +1,18 @@
 window.onload = function() {
     let black = document.getElementById('black');
     black.classList.add('selected')
+
+    red.style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 255) + ',' +  Math.floor(Math.random() * 255) + ',' +  Math.floor(Math.random() * 255) + ')';
+    green.style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 255) + ',' +  Math.floor(Math.random() * 255) + ',' +  Math.floor(Math.random() * 255) + ')';
+    blue.style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 255) + ',' +  Math.floor(Math.random() * 255) + ',' +  Math.floor(Math.random() * 255) + ')';
 }
+
 
 let pixels = document.getElementById('pixel-board').children;
 for (i = 0; i < pixels.length; i += 1) {
     pixels[i].className = 'pixel';
 }
+
 
 let black = document.getElementById('black');
 let red = document.getElementById('red');
@@ -47,3 +53,51 @@ function limpar () {
     }
 }
   
+let input = document.getElementById('board-size');
+let buttonBoard = document.getElementById('generate-board');
+
+buttonBoard.addEventListener('click', mudarTamanho);
+
+function mudarTamanho (event) {
+    if (input.value === '') {
+        window.alert ('Board inválido!')
+    }
+
+    else if (input.value >= 5 && input.value <= 50) {
+    for (let i = 0; i < (input.value*input.value - 25); i += 1) {
+    let novo = document.createElement('div');
+    novo.className = 'pixel';
+    document.getElementById('pixel-board').appendChild(novo);}
+    let tamanho = input.value*40 + input.value*0.18*40;
+    let tamanho2 = input.value*40 + input.value*40;
+    document.getElementById('pixel-board').style.width = tamanho.toString() + 'px';
+    document.getElementById('pixel-board').style.height = tamanho2.toString() + 'px';}
+
+    else if (input.value < 5) {
+        input.value = 5;
+        for (let i = 0; i < (input.value*input.value - 25); i += 1) {
+            let novo = document.createElement('div');
+            novo.className = 'pixel';
+            document.getElementById('pixel-board').appendChild(novo);}
+            let tamanho = input.value*40 + input.value*0.18*40;
+            let tamanho2 = input.value*40 + input.value*40;
+            document.getElementById('pixel-board').style.width = tamanho.toString() + 'px';
+            document.getElementById('pixel-board').style.height = tamanho2.toString() + 'px';
+    } 
+
+    else if (input.value > 50) {
+        input.value = 50;
+        for (let i = 0; i < (input.value*input.value - 25); i += 1) {
+            let novo = document.createElement('div');
+            novo.className = 'pixel';
+            document.getElementById('pixel-board').appendChild(novo);}
+            let tamanho = input.value*40 + input.value*0.18*40;
+            let tamanho2 = input.value*40 + input.value*40;
+            document.getElementById('pixel-board').style.width = tamanho.toString() + 'px';
+            document.getElementById('pixel-board').style.height = tamanho2.toString() + 'px';
+    }
+
+    else if (input.value === '') {
+        window.alert ('Board inválido!')
+    }
+}
