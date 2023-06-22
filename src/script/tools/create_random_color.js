@@ -1,3 +1,0 @@
-function newRandomColor() {
-    newColor = `rgb()`
-}

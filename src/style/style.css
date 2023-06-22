@@ -1,19 +1,25 @@
 .color {
-    display: inline-block;
     width: 100px;
     height: 100px;
-    border: 1px solid black;
+    border: 5px solid black;
+    border-radius: 50%;
+    margin: 5px;
 }
-#black {
+#color-palette {
+    /* border: 5px solid red; */
+    width: fit-content;
+    display: flex;
+}
+#fixed-color {
     background-color: black;
 }
-#red {
+#color-01 {
     background-color: red;
 }
-#green {
+#color-02 {
     background-color: green;
 }
-#blue {
+#color-03 {
     background-color: blue;
 }
 #pixel-board {
