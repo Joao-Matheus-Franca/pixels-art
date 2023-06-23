@@ -32,33 +32,72 @@ color03.addEventListener('click', addSelectedClass)
 //Seleciona o quadro de pixels:
 const pixelsBoard = document.getElementById('pixel-board');
 
-//Adiciona classe 'pixel' aos elementos do quadro de pixels:
-for (i = 0; i < 5; i += 1) {
-    const newElement = document.createElement('tr');
-    newElement.className = 'pixel-line'
-    pixelsBoard.appendChild(newElement)
+//Adiciona linha de pixels ao quadro de pixels:
+function createPixelLines(number) {
+    for (i = 0; i < number; i += 1) {
+        const newElement = document.createElement('tr');
+        newElement.className = 'pixel-line'
+        pixelsBoard.appendChild(newElement)
+    }
 }
 
 //Seleciona linha de pixels:
 const pixelLine = document.getElementsByClassName('pixel-line')
 
 //Adiciona colunas a cada linha:
-for (i = 0; i < pixelLine.length; i += 1) {
-    for (l = 0; l < pixelLine.length; l += 1) {
-        const newElement = document.createElement('td');
-        newElement.className = 'pixel'
-        pixelLine[i].appendChild(newElement)
+function createPixelElements(pixels = pixelLine.length) {
+    for (i = 0; i < pixels; i += 1) {
+        for (l = 0; l < pixels; l += 1) {
+            if (pixelLine[i].children.length < pixels) {
+                const newElement = document.createElement('td');
+                newElement.className = 'pixel'
+                pixelLine[i].appendChild(newElement)
+            }
+        }
     }
 }
 
-//
+//Adicionar cor aos pixels:
+function addColor(event) {
+    const color = getComputedStyle(document.getElementsByClassName('selected')[0]).backgroundColor;
+    event.target.style.backgroundColor = color;
+}
 
 //Seleciona os elementos com classe pixel:
 const pixels = document.getElementsByClassName('pixel')
 
 //Adiciona evento de clique nos pixels:
-for (id = 0; i < pixels.length; id += 1) {
-    pixels[i].addEventListener('click', addColor);
+function addColorEvent() {
+    for (i = 0; i < pixels.length; i += 1) {
+        pixels[i].addEventListener('click', addColor);
+    }
+}
+
+//Reseta a cor dos pixels para branco:
+function clear () { 
+    for (i = 0; i < pixels.length; i += 1){
+        pixels[i].style.backgroundColor = 'white'
+    }
+}
+
+//Seleciona o botão para limpar o quadro:
+const clearButton = document.getElementById('clear-board');
+
+//Adiciona o evento ao botão de limpar os pixels:
+clearButton.addEventListener('click', clear);
+
+const input = document.getElementById('board-size');
+
+const buttonBoard = document.getElementById('generate-board');
+
+buttonBoard.addEventListener('click', mudarTamanho);
+
+function mudarTamanho () {
+    if (input.value === '') window.alert ('Board inválido!')
+
+    createPixelLines(Number(input.value) - pixelLine.length)
+    createPixelElements()
+    addColorEvent()
 }
 
 //Atribui cores aleatórias ao carregar a página:
@@ -67,4 +106,8 @@ window.onload = function() {
     color01.style.backgroundColor = newRandomColor()
     color02.style.backgroundColor = newRandomColor()
     color03.style.backgroundColor = newRandomColor()
+
+    createPixelLines(5)
+    createPixelElements()
+    addColorEvent()
 }
