@@ -1,7 +1,3 @@
-for (i = 0; i < pixels.length; i += 1) {
-    pixels[i].className = 'pixel';
-}
-
 black.addEventListener('click', addSelected)
 red.addEventListener('click', addSelected)
 green.addEventListener('click', addSelected)

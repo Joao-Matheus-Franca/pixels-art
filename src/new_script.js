@@ -15,12 +15,28 @@ const color01 = document.getElementById('color-01');
 const color02 = document.getElementById('color-02');
 const color03 = document.getElementById('color-03');
 
-//Seleciona o conjunto de elementos do quadro de pixels:
-const pixels = document.getElementById('pixel-board').children;
+//Adiciona a classe 'selected' a cores:
+
+//Seleciona o quadro de pixels:
+const pixels = document.getElementById('pixel-board');
 
 //Adiciona classe 'pixel' aos elementos do quadro de pixels:
-for (i = 0; i < pixels.length; i += 1) {
-    pixels[i].className = 'pixel';
+for (i = 0; i < 5; i += 1) {
+    const newElement = document.createElement('tr');
+    newElement.className = 'pixel-line'
+    pixels.appendChild(newElement)
+}
+
+//Seleciona linha de pixels:
+const pixelLine = document.getElementsByClassName('pixel-line')
+
+//Adiciona colunas a cada linha:
+for (i = 0; i < pixelLine.length; i += 1) {
+    for (l = 0; l < pixelLine.length; l += 1) {
+        const newElement = document.createElement('td');
+        newElement.className = 'pixel'
+        pixelLine[i].appendChild(newElement)
+    }
 }
 
 //Atribui cores aleatórias ao carregar a página:
