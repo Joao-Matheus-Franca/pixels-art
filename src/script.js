@@ -14,6 +14,7 @@ const fixedColor = document.getElementById('fixed-color');
 const color01 = document.getElementById('color-01');
 const color02 = document.getElementById('color-02');
 const color03 = document.getElementById('color-03');
+const clearColor = document.getElementById('clear-color');
 
 //Adiciona a classe 'selected' a cores:
 function addSelectedClass (event) {
@@ -28,6 +29,7 @@ fixedColor.addEventListener('click', addSelectedClass)
 color01.addEventListener('click', addSelectedClass)
 color02.addEventListener('click', addSelectedClass)
 color03.addEventListener('click', addSelectedClass)
+clearColor.addEventListener('click', addSelectedClass)
 
 //Seleciona o quadro de pixels:
 const pixelsBoard = document.getElementById('pixel-board');
@@ -107,7 +109,7 @@ window.onload = function() {
     color02.style.backgroundColor = newRandomColor()
     color03.style.backgroundColor = newRandomColor()
 
-    createPixelLines(5)
+    createPixelLines(16)
     createPixelElements()
     addColorEvent()
 }
