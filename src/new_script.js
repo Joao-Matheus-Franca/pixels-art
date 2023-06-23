@@ -16,15 +16,27 @@ const color02 = document.getElementById('color-02');
 const color03 = document.getElementById('color-03');
 
 //Adiciona a classe 'selected' a cores:
+function addSelectedClass (event) {
+    document.querySelector('.selected').classList = 'color'
+    if (event.target.classList !== 'color selected') {
+        event.target.classList.add('selected')
+    }
+}
+
+//Adiciona o evento de clique a tabela de cores:
+fixedColor.addEventListener('click', addSelectedClass)
+color01.addEventListener('click', addSelectedClass)
+color02.addEventListener('click', addSelectedClass)
+color03.addEventListener('click', addSelectedClass)
 
 //Seleciona o quadro de pixels:
-const pixels = document.getElementById('pixel-board');
+const pixelsBoard = document.getElementById('pixel-board');
 
 //Adiciona classe 'pixel' aos elementos do quadro de pixels:
 for (i = 0; i < 5; i += 1) {
     const newElement = document.createElement('tr');
     newElement.className = 'pixel-line'
-    pixels.appendChild(newElement)
+    pixelsBoard.appendChild(newElement)
 }
 
 //Seleciona linha de pixels:
@@ -37,6 +49,16 @@ for (i = 0; i < pixelLine.length; i += 1) {
         newElement.className = 'pixel'
         pixelLine[i].appendChild(newElement)
     }
+}
+
+//
+
+//Seleciona os elementos com classe pixel:
+const pixels = document.getElementsByClassName('pixel')
+
+//Adiciona evento de clique nos pixels:
+for (id = 0; i < pixels.length; id += 1) {
+    pixels[i].addEventListener('click', addColor);
 }
 
 //Atribui cores aleatórias ao carregar a página:

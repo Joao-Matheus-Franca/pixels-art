@@ -1,16 +1,3 @@
-black.addEventListener('click', addSelected)
-red.addEventListener('click', addSelected)
-green.addEventListener('click', addSelected)
-blue.addEventListener('click', addSelected)
-
-function addSelected (event) {
-    console.log(event.target);
-        document.querySelector('.selected').classList = 'color'
-    if (event.target.classList != 'color selected') {
-        event.target.classList.add('selected')
-    }
-}
-
 for (id = 0; id < pixels.length; id += 1) {
     pixels[id].addEventListener('click', adicionarCor);
 }
