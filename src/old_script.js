@@ -1,23 +1,6 @@
-window.onload = function() {
-    let black = document.getElementById('black');
-    black.classList.add('selected')
-
-    red.style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 255) + ',' +  Math.floor(Math.random() * 255) + ',' +  Math.floor(Math.random() * 255) + ')';
-    green.style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 255) + ',' +  Math.floor(Math.random() * 255) + ',' +  Math.floor(Math.random() * 255) + ')';
-    blue.style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 255) + ',' +  Math.floor(Math.random() * 255) + ',' +  Math.floor(Math.random() * 255) + ')';
-}
-
-
-let pixels = document.getElementById('pixel-board').children;
 for (i = 0; i < pixels.length; i += 1) {
     pixels[i].className = 'pixel';
 }
-
-
-let black = document.getElementById('black');
-let red = document.getElementById('red');
-let green = document.getElementById('green');
-let blue = document.getElementById('blue');
 
 black.addEventListener('click', addSelected)
 red.addEventListener('click', addSelected)
