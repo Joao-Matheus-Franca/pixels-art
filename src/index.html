@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+    <head>
+        <title>Pixel Art</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style/style.css" type="text/css">
+        <link rel="icon" href="https://www.svgrepo.com/show/500253/palette-library.svg">
+    </head>
+    <body>
+        <h1 id="title">Pixel Art</h1>
+        <nav id="color-palette">
+            <div class="color" id="fixed-color"></div>
+            <div class="color" id="color-01"></div>
+            <div class="color" id="color-02"></div>
+            <div class="color" id="color-03"></div>
+            <div class="color" id="clear-color"></div>
+        </nav>
+        <table>
+            <tr id='pixel-board'>
+            </tr>
+        </table>
+        <form id="size-form">
+            <input id="board-size" type="number" min="1">
+            <button id="generate-board" type="button">Aplicar</button>
+            <button id="clear-board" type="button">Limpar</button>
+        </form>
+        <script src="./scripts/createRandomColor.js"></script>
+        <script src="./scripts/addSelectedClass.js"></script>
+        <script src="./scripts/createPixelLines.js"></script>
+        <script src="./scripts/createPixelElements.js"></script>
+        <script src="./scripts/addColorPixel.js"></script>
+        <script src="./scripts/clearColors.js"></script>
+        <script src="./scripts/changeSize.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
