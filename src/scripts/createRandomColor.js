@@ -6,5 +6,3 @@ function newRandomColor() {
     newColor = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
     return newColor;
 }
-
-export default newRandomColor
