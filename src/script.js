@@ -8,6 +8,8 @@ const color01 = document.getElementById('color-01');
 const color02 = document.getElementById('color-02');
 const color03 = document.getElementById('color-03');
 const randomColor02 = document.getElementById('random-color-02');
+const randomColor03 = document.getElementById('random-color-03');
+const randomColor04 = document.getElementById('random-color-04');
 const pixelsBoard = document.getElementById('pixel-board');
 const pixelLine = document.getElementsByClassName('pixel-line');
 const pixels = document.getElementsByClassName('pixel')
@@ -25,6 +27,8 @@ color01.addEventListener('click', addSelectedClass);
 color02.addEventListener('click', addSelectedClass);
 color03.addEventListener('click', addSelectedClass);
 randomColor02.addEventListener('click', addSelectedClass);
+randomColor03.addEventListener('click', addSelectedClass);
+randomColor04.addEventListener('click', addSelectedClass);
 clearButton.addEventListener('click', clear);
 buttonBoard.addEventListener('click', changeSize);
 
@@ -38,6 +42,8 @@ window.onload = function() {
     fixedColor01.classList.add('selected')
     randomColor01.style.backgroundColor = newRandomColor()
     randomColor02.style.backgroundColor = newRandomColor()
+    randomColor03.style.backgroundColor = newRandomColor()
+    randomColor04.style.backgroundColor = newRandomColor()
 
     createPixelLines(16)
     createPixelElements()

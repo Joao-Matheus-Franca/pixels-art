@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style/style.css" type="text/css">
         <link rel="icon" href="https://www.svgrepo.com/show/500253/palette-library.svg">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     </head>
     <body>
         <h1 id="title">Pixel Art</h1>
@@ -17,25 +19,33 @@
         </form>
         <main>
         <nav id="color-palette-left">
-            <div class="color" id="fixed-color-01"></div>
             <div class="color" id="color-red"></div>
             <div class="color" id="color-green"></div>
             <div class="color" id="color-blue"></div>
-            <div class="color" id="fixed-color-02"></div>
+            <div class="color" id="color-01"></div>
+            <div class="color" id="color-02"></div>
+            <div class="color" id="color-03"></div>
         </nav>
         <table>
             <tr id='pixel-board'>
             </tr>
         </table>
         <nav id="color-palette-rigth">
+            <div class="color" id="fixed-color-01"></div>
             <div class="color" id="random-color-01"></div>
-            <div class="color" id="color-01"></div>
-            <div class="color" id="color-02"></div>
-            <div class="color" id="color-03"></div>
             <div class="color" id="random-color-02"></div>
+            <div class="color" id="random-color-03"></div>
+            <div class="color" id="random-color-04"></div>
+            <div class="color" id="fixed-color-02"></div>
         </nav>
         </main>
-        <footer>Criado por João Matheus Silva Franca</footer>
+        <footer>
+            <p>© Criado por João Matheus Silva Franca</p>
+            <div id="footer-images">
+                <a target="_blank" href="https://github.com/Joao-Matheus-Franca"><i class="devicon-github-original"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/joaomatheussilvafranca/"><i class="devicon-linkedin-plain"></i></a>
+            </div>
+        </footer>
         <script src="./scripts/createRandomColor.js"></script>
         <script src="./scripts/addSelectedClass.js"></script>
         <script src="./scripts/createPixelLines.js"></script>
