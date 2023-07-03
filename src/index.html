@@ -8,22 +8,31 @@
     </head>
     <body>
         <h1 id="title">Pixel Art</h1>
-        <nav id="color-palette">
-            <div class="color" id="fixed-color"></div>
-            <div class="color" id="color-01"></div>
-            <div class="color" id="color-02"></div>
-            <div class="color" id="color-03"></div>
-            <div class="color" id="clear-color"></div>
-        </nav>
-        <table>
-            <tr id='pixel-board'>
-            </tr>
-        </table>
         <form id="size-form">
             <input id="board-size" type="number" min="1">
             <button id="generate-board" type="button">Aplicar</button>
             <button id="clear-board" type="button">Limpar</button>
         </form>
+        <main>
+        <nav id="color-palette-left">
+            <div class="color" id="fixed-color-01"></div>
+            <div class="color" id="color-red"></div>
+            <div class="color" id="color-green"></div>
+            <div class="color" id="color-blue"></div>
+            <div class="color" id="fixed-color-02"></div>
+        </nav>
+        <table>
+            <tr id='pixel-board'>
+            </tr>
+        </table>
+        <nav id="color-palette-rigth">
+            <div class="color" id="random-color-01"></div>
+            <div class="color" id="color-01"></div>
+            <div class="color" id="color-02"></div>
+            <div class="color" id="color-03"></div>
+            <div class="color" id="random-color-02"></div>
+        </nav>
+        </main>
         <script src="./scripts/createRandomColor.js"></script>
         <script src="./scripts/addSelectedClass.js"></script>
         <script src="./scripts/createPixelLines.js"></script>

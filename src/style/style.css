@@ -9,6 +9,11 @@ body {
     margin: 0%;
 }
 
+main {
+    display: flex;
+    align-items: center;
+}
+
 table {
     border-spacing: 0px;
     border: 2px solid black;
@@ -67,25 +72,43 @@ button {
     border-radius: 25%;
     margin: 5px;
 }
-#color-palette {
+#color-palette-left {
     width: fit-content;
     display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+}
+#color-palette-rigth {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
 }
 
-#fixed-color {
+#fixed-color-01 {
     background-color: black;
 }
-#color-01 {
+#color-red {
     background-color: red;
 }
-#color-02 {
+#color-green {
     background-color: green;
 }
-#color-03 {
+#color-blue {
     background-color: blue;
 }
-#clear-color {
+#fixed-color-02 {
     background-color: white;
+}
+
+#color-01 {
+    background-color: rgb(255, 255, 0);
+}
+#color-02 {
+    background-color: rgb(255, 0, 255);
+}
+#color-03 {
+    background-color: rgb(0, 255, 255);
 }
 
 #pixel-board {
