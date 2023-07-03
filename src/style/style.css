@@ -20,15 +20,29 @@ table {
 }
 
 button {
-    background-color: rgba(29, 53, 87, 1);
+    background-color: rgba(49, 73, 107, 1);
+    font-family: 'Chakra Petch', sans-serif;
     border: none;
     color: white;
     padding: 15px ;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
-    border-radius: 8px;
+    font-size: 22px;
+}
+
+footer {
+    font-size: 22px;
+    margin: 20px;
+    font-family: 'Chakra Petch', sans-serif;
+    width: 100vw;
+    text-align: center;
+    background-color: rgba(29, 53, 87, 1);
+    color: white;
+    margin-top: auto;
+    margin-bottom: 0%;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #title {
@@ -46,19 +60,22 @@ button {
 }
 
 #size-form {
-    margin: 10px;
+    margin-bottom: 10px;
+    width: 100vw;
+    text-align: center;
+    background-color: rgb(49, 73, 107);
 }
 #board-size {
     font-family: 'Chakra Petch', sans-serif;
     width: 55px;
-    height: 30px;
+    height: 10px;
     border: none;
     color: rgba(29, 53, 87, 1);
     padding: 15px ;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 22px;
     border-radius: 8px;
 }
 #generate-board {
@@ -76,13 +93,13 @@ button {
     width: fit-content;
     display: flex;
     flex-direction: column;
-    margin-right: 2%;
+    margin-right: 5px;
 }
 #color-palette-rigth {
     width: fit-content;
     display: flex;
     flex-direction: column;
-    margin-left: 2%;
+    margin-left: 10px;
 }
 
 #fixed-color-01 {
