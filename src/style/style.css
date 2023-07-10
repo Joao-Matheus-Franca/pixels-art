@@ -61,7 +61,7 @@ a {
 }
 
 #footer-images {
-    margin-left: 12vw;
+    margin-left: 15vw;
 }
 
 #title {
@@ -175,6 +175,10 @@ a {
 
     footer {
         font-size: 20px;
+    }
+
+    #footer-images {
+        margin-left: 5vw;
     }
 
     .color {
