@@ -17,6 +17,7 @@ const clearButton = document.getElementById('clear-board');
 const input = document.getElementById('board-size');
 const buttonBoard = document.getElementById('generate-board');
 const removeBoard = document.getElementById('remove-border');
+// const saveButton = document.getElementById('save-pixel-art')
 
 fixedColor01.addEventListener('click', addSelectedClass);
 colorRed.addEventListener('click', addSelectedClass);
@@ -33,6 +34,7 @@ randomColor04.addEventListener('click', addSelectedClass);
 clearButton.addEventListener('click', clear);
 buttonBoard.addEventListener('click', changeSize);
 removeBoard.addEventListener('click', removePixelBoard);
+// saveButton.addEventListener('click', savePixelArt)
 
 function addColorEvent() {
     for (i = 0; i < pixels.length; i += 1) {
