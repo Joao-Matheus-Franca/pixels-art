@@ -27,7 +27,7 @@
         font-family: 'Chakra Petch', sans-serif;
         border: none;
         color: white;
-        padding: 15px ;
+        padding: 10px ;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -77,7 +77,7 @@
     }
     
     #remove-border {
-        width: 180px;
+        width: 170px;
     }
     
     #footer-images {
@@ -85,7 +85,7 @@
     }
     
     #title {
-        font-size: 60px;
+        font-size: 50px;
         margin: 20px;
         margin-top: 0%;
         margin-bottom: 0%;
@@ -94,8 +94,8 @@
         text-align: center;
         background-color: rgba(29, 53, 87, 1);
         color: white;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
     }
     
     #size-form {
@@ -106,8 +106,8 @@
 
     #board-size {
         font-family: 'Chakra Petch', sans-serif;
-        width: 55px;
-        height: 10px;
+        width: 40px;
+        height: 5px;
         border: none;
         color: rgba(29, 53, 87, 1);
         padding: 15px ;
