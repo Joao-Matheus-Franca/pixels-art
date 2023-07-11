@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) and (orientation: portrait) {
     body {
         display: flex;
         flex-direction: column;
@@ -13,6 +13,9 @@
     main {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
     
     table {
@@ -29,36 +32,53 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 22px;
+        font-size: 30px;
     }
-    
-    #remove-border {
-        width: 195px;
-    }
-    
+
     p {
         margin: 0%;
     }
-    
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
     footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        font-size: 22px;
+        font-size: 30px;
         margin: 20px;
-        font-family: 'Chakra Petch', sans-serif;
-        width: 100vw;
-        background-color: rgba(29, 53, 87, 1);
-        color: white;
         margin-top: auto;
         margin-bottom: 0%;
         padding-top: 5px;
         padding-bottom: 5px;
+        font-family: 'Chakra Petch', sans-serif;
+        width: 100vw;
+        background-color: rgba(29, 53, 87, 1);
+        color: white;
+    }
+
+    .color {
+        width: 125px;
+        height: 125px;
+        border: 4px solid rgb(29, 53, 87);
+        border-radius: 25%;
+        margin: 5px;
+    }
+
+    .pixel {
+        border: 2px;
+        border-style: solid;
+        border-color: black;
+        background-color: white;
+        width: 50px;  
+        height: 50px;
     }
     
-    a {
-        text-decoration: none;
-        color: white;
+    #remove-border {
+        width: 260px;
     }
     
     #footer-images {
@@ -66,15 +86,15 @@
     }
     
     #title {
-        font-size: 75px;
+        font-size: 85px;
         margin: 20px;
+        margin-top: 0%;
+        margin-bottom: 0%;
         font-family: 'Chakra Petch', sans-serif;
         width: 100vw;
         text-align: center;
         background-color: rgba(29, 53, 87, 1);
         color: white;
-        margin-top: 0%;
-        margin-bottom: 0%;
         padding-top: 5px;
         padding-bottom: 5px;
     }
@@ -85,6 +105,7 @@
         text-align: center;
         background-color: rgb(49, 73, 107);
     }
+
     #board-size {
         font-family: 'Chakra Petch', sans-serif;
         width: 55px;
@@ -98,26 +119,21 @@
         font-size: 22px;
         border-radius: 8px;
     }
+
     #generate-board {
         font-family: 'Chakra Petch', sans-serif;
-    }
-    
-    .color {
-        width: 100px;
-        height: 100px;
-        border: 4px solid rgb(29, 53, 87);
-        border-radius: 25%;
-        margin: 5px;
     }
     
     #color-palette-left {
         width: fit-content;
         display: flex;
+        margin: 15px;
     }
     
     #color-palette-rigth {
         width: fit-content;
         display: flex;
+        margin: 15px;
     }
     
     #fixed-color-01 {
@@ -151,15 +167,6 @@
         flex-direction: column;
         width: fit-content;
         height: fit-content;
-    }
-    
-    .pixel {
-        border: 2px;
-        border-style: solid;
-        border-color: black;
-        background-color: white;
-        width: 40px;  
-        height: 40px;
     }
     
     #clear-board {
